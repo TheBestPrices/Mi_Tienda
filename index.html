@@ -8,13 +8,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h2>TheBestPrices</h2>
-    <nav>
-      <a href="index.html">🏠 Inicio</a>
-      <a href="#" id="ver-carrito">🛒 Carrito (<span id="contador">0</span>)</a>
-    </nav>
-  </header>
+ <header>
+  <h2>TheBestPrices</h2>
+  <nav>
+    <a href="index.html">🏠 Inicio</a>
+    <a href="#" id="ver-carrito">🛒 Carrito (<span id="contador">0</span>)</a>
+  </nav>
+</header>
 
   <section class="hero">
     <h1>Inspiración para tu día a día</h1>
@@ -32,23 +32,92 @@
   </section>
 
   <section class="catalogo">
-    <!-- Tu catálogo completo intacto -->
-    <!-- … -->
+    <div class="producto">
+      <a href="afinador.html">
+        <img src="img/afinador_Irin.png" alt="Afinador digital Irin" />
+        <h3>Sound Regulator</h3>
+        <p>Pequeño y moderno</p>
+        <p><strong>C$ 580</strong></p>
+      </a>
+    </div>
+    <div class="producto">
+      <a href="audifonos.html">
+        <img src="img/audífonos_inalámbricos.png" alt="Audífonos inalámbricos" />
+        <h3>Audífonos</h3>
+        <p>Sonido envolvente</p>
+        <p><strong>C$ 950</strong></p>
+      </a>
+    </div>
+    <div class="producto">
+      <a href="powerbank.html">
+        <img src="img/Power_Bank_10,000_mA.png" alt="Power Bank" />
+        <h3>Power Bank</h3>
+        <p>Alta capacidad</p>
+        <p><strong>C$ 650</strong></p>
+      </a>
+    </div>
+    <div class="producto">
+      <a href="termo.html">
+        <img src="img/TermoCoffee.png" alt="Termo térmico" />
+        <h3>Termo</h3>
+        <p>Ideal para café o té</p>
+        <p><strong>C$ 420</strong></p>
+      </a>
+    </div>
+    <div class="producto">
+      <a href="vaso.html">
+        <img src="img/VasoReutilizable.png" alt="Vaso reutilizable" />
+        <h3>Vaso Creativo</h3>
+        <p>Diseño moderno</p>
+        <p><strong>C$ 280</strong></p>
+      </a>
+    </div>
+    <div class="producto">
+      <a href="velas.html">
+        <img src="img/vela.png" alt="Vela aromática" />
+        <h3>Velas Aromáticas</h3>
+        <p>Aroma relajante</p>
+        <p><strong>C$ 220</strong></p>
+      </a>
+    </div>
+    <div class="producto">
+      <a href="peluche.html">
+        <img src="img/PelucheSuave.png" alt="Peluche suave" />
+        <h3>Peluche</h3>
+        <p>Suave y abrazable</p>
+        <p><strong>C$ 370</strong></p>
+      </a>
+    </div>
+    <div class="producto">
+      <a href="llavero.html">
+        <img src="img/llavero.png" alt="Llavero artesanal" />
+        <h3>Llavero</h3>
+        <p>Estilo único</p>
+        <p><strong>C$ 85</strong></p>
+      </a>
+    </div>
+    <div class="producto">
+      <a href="libretas.html">
+        <img src="img/libreta_creativa.png" alt="Libreta creativa" />
+        <h3>Libretas Creativas</h3>
+        <p>Diseño inspirador</p>
+        <p><strong>C$ 180</strong></p>
+      </a>
+    </div>
+    <div class="producto">
+      <a href="juguete.html">
+        <img src="img/Carrojugete.png" alt="Juguete de madera" />
+        <h3>Juguete</h3>
+        <p>Estimulación creativa</p>
+        <p><strong>C$ 520</strong></p>
+      </a>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 TheBestPrices </p>
   </footer>
 
-  <!-- 🛒 Carrito modal — sin script dentro -->
-  <div id="carrito-modal" style="display: none;">
-    <h3>🛒 Tu carrito</h3>
-    <ul id="lista-carrito"></ul>
-    <p id="total-carrito"></p>
-    <button onclick="procesarPago()" class="boton">💳 Pagar ahora</button>
-  </div>
-
-  <!-- 🎲 Barajar productos -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const catalogo = document.querySelector(".catalogo");
@@ -68,7 +137,12 @@
     });
   </script>
 
-  <!-- ✅ Script correctamente ubicado -->
-  <script src="script.js"></script>
+  <div id="carrito-modal" style="display: none;">
+    <h3>🛒 Tu carrito</h3>
+    <ul id="lista-carrito"></ul>
+    <p id="total-carrito"></p>
+    <button onclick="procesarPago()" class="boton">💳 Pagar ahora</button>
+    <script src="script.js"></script>
+  </div>
 </body>
 </html>
