@@ -114,10 +114,19 @@
     </div>
   </section>
 
-  <footer>
+   <footer>
     <p>&copy; 2025 TheBestPrices </p>
   </footer>
 
+  <!-- Carrito modal -->
+  <div id="carrito-modal" style="display: none;">
+    <h3>🛒 Tu carrito</h3>
+    <ul id="lista-carrito"></ul>
+    <p id="total-carrito"></p>
+    <button onclick="procesarPago()" class="boton">💳 Pagar ahora</button>
+  </div>
+
+  <!-- Script de mezcla -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const catalogo = document.querySelector(".catalogo");
@@ -136,13 +145,9 @@
       setInterval(barajarYActualizar, 10000);
     });
   </script>
-  
-  </div>
-    <div id="carrito-modal" style="display: none;">
-    <h3>🛒 Tu carrito</h3>
-    <ul id="lista-carrito"></ul>
-    <p id="total-carrito"></p>
-    <button onclick="procesarPago()" class="boton">💳 Pagar ahora</button>
-      <script src="script.js"></script>
+
+  <!-- Script principal del carrito -->
+  <script src="script.js"></script>
 </body>
 </html>
+
