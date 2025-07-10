@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- Encabezado como en index -->
+  <!-- Encabezado igual que en afinador -->
   <header>
     <h2>TheBestPrices</h2>
     <nav>
@@ -30,22 +30,36 @@
     <p class="precio">C$ 950</p>
     <p class="descripcion">Disfruta de tu música favorita con libertad. Estos audífonos cuentan con conectividad Bluetooth, diseño ergonómico, cancelación de ruido y batería de larga duración. Incluyen estuche de carga y calidad de sonido envolvente.</p>
 
-    <button class="boton agregar-carrito" data-nombre="Audífonos inalámbricos" data-precio="950">Añadir al carrito</button>
-    <button class="boton" id="ver-carrito">🛒 Ver carrito</button>
-    <button class="boton" id="pagar">💳 Pagar ahora</button>
+    <button class="boton" onclick="agregarAlCarrito('Audífonos inalámbricos', 950)">Añadir al carrito</button>
+    <button class="boton" onclick="pagarAhora()">Pagar ahora</button>
 
     <a href="index.html" class="volver">← Volver al catálogo</a>
   </div>
 
-  <!-- Modal del carrito -->
-  <div id="carrito-modal">
-    <h3>🛒 Tu carrito</h3>
-    <ul id="lista-carrito"></ul>
-    <p id="total-carrito"></p>
-    <button onclick="procesarPago()" class="boton">💳 Pagar ahora</button>
-    <button onclick="cerrarCarrito()" class="boton" style="background:#999;">Cerrar</button>
-  </div>
+  <!-- Footer como en la página principal -->
+  <footer>
+    <p>&copy; 2025 TheBestPrices</p>
+  </footer>
 
-  <script src="carrito.js"></script>
+  <!-- Conexión con script.js -->
+  <script src="script.js"></script>
+  <script>
+    function agregarAlCarrito(nombre, precio) {
+      const producto = { nombre, precio };
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push(producto);
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+
+      const contador = document.getElementById('contador');
+      if (contador) contador.textContent = carrito.length;
+
+      alert(`${nombre} agregado al carrito.`);
+    }
+
+    function pagarAhora() {
+      alert("Gracias por tu compra. Nos pondremos en contacto para coordinar el pago.");
+      // Puedes redirigir a WhatsApp, una página de confirmación o mantener el modal
+    }
+  </script>
 </body>
 </html>
