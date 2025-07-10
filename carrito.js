@@ -81,8 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       agregarProducto(nombre, precio);
     }
 
-    if (e.target.id === "ver-carrito") {
-      mostrarCarrito();
+    if (e.target.closest("#ver-carrito")) {
     }
 
     if (e.target.id === "pagar") {
