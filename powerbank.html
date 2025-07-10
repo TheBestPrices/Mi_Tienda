@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Power Bank</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      animation: fadeInUp 0.8s ease;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.5rem;
+    }
+
+    .precio {
+      color: #10b981;
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .descripcion {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .boton {
+      display: inline-block;
+      background-color: #10b981;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .boton:hover {
+      background-color: #0e9e6e;
+    }
+
+    .volver {
+      display: block;
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="Power_Bank_10,000_mA.png" alt="Power Bank">
+    <h1>Power Bank 10,000 mAh</h1>
+    <p class="precio">C$ 650</p>
+    <p class="descripcion">Mantente siempre conectado con este potente Power Bank. Con capacidad de 10,000 mAh, carga dos dispositivos a la vez y lleva energía extra en tu mochila sin ocupar espacio.</p>
+    <a href="https://wa.me/50586199057" class="boton">Comprar por WhatsApp</a>
+    <a href="index.html" class="volver">← Volver al catálogo</a>
+  </div>
+</body>
+</html>

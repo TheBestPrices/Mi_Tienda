@@ -1,0 +1,167 @@
+/* === Animaciones === */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Base === */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* === Encabezado === */
+header {
+  background-color: #ffffff;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #10b981;
+}
+
+/* === Hero === */
+.hero {
+  text-align: center;
+  padding: 50px 15px;
+  background-color: #e0f7fa;
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero h1 {
+  font-size: 2.2em;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* === Categorías === */
+.categorias {
+  padding: 40px 15px;
+  text-align: center;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  animation: fadeInUp 0.8s ease;
+}
+
+.categorias h2 {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  color: #10b981;
+}
+
+.lista-categorias {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.lista-categorias a {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #10b981;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.lista-categorias a:hover {
+  background-color: #0e9b74;
+}
+
+/* === Catálogo de productos === */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 30px 15px;
+}
+
+.producto {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.producto:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.producto a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.producto h3 {
+  font-size: 1em;
+  margin: 8px 0 4px;
+}
+
+.producto p {
+  font-size: 0.85em;
+  color: #666;
+  margin: 0;
+}
+
+.producto strong {
+  color: #10b981;
+  font-size: 1em;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #eeeeee;
+  font-size: 0.85em;
+  margin-top: 2rem;
+  border-top: 2px solid #10b981;
+}
+
+.boton-contacto {
+  display: inline-block;
+  margin-top: 8px;
+  background-color: #10b981;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.boton-contacto:hover {
+  background-color: #0e9b74;
+}
