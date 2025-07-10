@@ -165,3 +165,57 @@ footer {
 .boton-contacto:hover {
   background-color: #0e9b74;
 }
+/* === Responsive para móviles === */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.6em;
+  }
+
+  .categorias h2 {
+    font-size: 1.4em;
+  }
+
+  .lista-categorias {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .catalogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .producto {
+    width: 90%;
+    margin-bottom: 1.2rem;
+  }
+
+  .producto img {
+    width: 100%;
+    height: auto;
+  }
+
+  footer {
+    font-size: 0.8em;
+    padding: 15px;
+  }
+}
