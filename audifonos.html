@@ -4,12 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Audífonos inalámbricos</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Encabezado igual que en afinador -->
+  <!-- Encabezado como en index -->
   <header>
     <h2>TheBestPrices</h2>
     <nav>
@@ -18,47 +17,48 @@
     </nav>
   </header>
 
-  <div class="container">
+  <!-- Hero opcional -->
+  <section class="hero">
     <h1>Audífonos inalámbricos</h1>
+    <p>Sonido envolvente con estilo</p>
+  </section>
 
-    <div class="carrusel">
+  <!-- Contenido de producto -->
+  <section class="catalogo">
+    <div class="producto">
       <img src="img/audifonos_1.avif" alt="Audífonos - vista frontal">
-      <img src="img/audifonos_2.avif" alt="Audífonos - vista lateral">
-      <img src="img/audifonos_3.avif" alt="Audífonos - estuche cerrado">
+      <h3>Audífonos inalámbricos</h3>
+      <p>Bluetooth, cancelación de ruido y carga rápida</p>
+      <p><strong>C$ 950</strong></p>
+      <button class="btn-agregar">Añadir al carrito</button>
+      <button onclick="pagarAhora()" class="boton">Pagar ahora</button>
     </div>
+  </section>
 
-    <p class="precio">C$ 950</p>
-    <p class="descripcion">Disfruta de tu música favorita con libertad. Estos audífonos cuentan con conectividad Bluetooth, diseño ergonómico, cancelación de ruido y batería de larga duración. Incluyen estuche de carga y calidad de sonido envolvente.</p>
-
-    <button class="boton" onclick="agregarAlCarrito('Audífonos inalámbricos', 950)">Añadir al carrito</button>
-    <button class="boton" onclick="pagarAhora()">Pagar ahora</button>
-
-    <a href="index.html" class="volver">← Volver al catálogo</a>
-  </div>
-
-  <!-- Footer como en la página principal -->
+  <!-- Footer como en index -->
   <footer>
     <p>&copy; 2025 TheBestPrices</p>
   </footer>
 
-  <!-- Conexión con script.js -->
+  <!-- Scripts -->
   <script src="script.js"></script>
   <script>
+    document.querySelector('.btn-agregar').addEventListener('click', () => {
+      agregarAlCarrito('Audífonos inalámbricos', 950);
+    });
+
     function agregarAlCarrito(nombre, precio) {
       const producto = { nombre, precio };
-      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
       carrito.push(producto);
       localStorage.setItem('carrito', JSON.stringify(carrito));
-
       const contador = document.getElementById('contador');
       if (contador) contador.textContent = carrito.length;
-
       alert(`${nombre} agregado al carrito.`);
     }
 
     function pagarAhora() {
       alert("Gracias por tu compra. Nos pondremos en contacto para coordinar el pago.");
-      // Puedes redirigir a WhatsApp, una página de confirmación o mantener el modal
     }
   </script>
 </body>
